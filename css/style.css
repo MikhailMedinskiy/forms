@@ -62,7 +62,8 @@ figure {
  * 2. Show the overflow in Edge and IE.
  */
 hr {
-  box-sizing: content-box;
+  -webkit-box-sizing: content-box;
+          box-sizing: content-box;
   /* 1 */
   height: 0;
   /* 1 */
@@ -261,7 +262,8 @@ button:-moz-focusring,
  *    `fieldset` elements in all browsers.
  */
 legend {
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   /* 1 */
   color: inherit;
   /* 2 */
@@ -296,7 +298,8 @@ textarea {
  */
 [type="checkbox"],
 [type="radio"] {
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   /* 1 */
   padding: 0;
   /* 2 */ }
@@ -487,31 +490,26 @@ template {
 .fa-rotate-90 {
   -ms-filter: "progid:DXImageTransform.Microsoft.BasicImage(rotation=1)";
   -webkit-transform: rotate(90deg);
-  -ms-transform: rotate(90deg);
   transform: rotate(90deg); }
 
 .fa-rotate-180 {
   -ms-filter: "progid:DXImageTransform.Microsoft.BasicImage(rotation=2)";
   -webkit-transform: rotate(180deg);
-  -ms-transform: rotate(180deg);
   transform: rotate(180deg); }
 
 .fa-rotate-270 {
   -ms-filter: "progid:DXImageTransform.Microsoft.BasicImage(rotation=3)";
   -webkit-transform: rotate(270deg);
-  -ms-transform: rotate(270deg);
   transform: rotate(270deg); }
 
 .fa-flip-horizontal {
   -ms-filter: "progid:DXImageTransform.Microsoft.BasicImage(rotation=0, mirror=1)";
   -webkit-transform: scale(-1, 1);
-  -ms-transform: scale(-1, 1);
   transform: scale(-1, 1); }
 
 .fa-flip-vertical {
   -ms-filter: "progid:DXImageTransform.Microsoft.BasicImage(rotation=2, mirror=1)";
   -webkit-transform: scale(1, -1);
-  -ms-transform: scale(1, -1);
   transform: scale(1, -1); }
 
 :root .fa-rotate-90,
@@ -519,7 +517,8 @@ template {
 :root .fa-rotate-270,
 :root .fa-flip-horizontal,
 :root .fa-flip-vertical {
-  filter: none; }
+  -webkit-filter: none;
+          filter: none; }
 
 .fa-stack {
   position: relative;
@@ -2713,18 +2712,42 @@ template {
   margin: 0;
   padding: 0;
   outline: none;
-  box-sizing: border-box; }
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box; }
 
 body {
-  color: #fff;
-  min-width: 310px;
+  color: #000;
+  min-width: 320px;
   background: #fff;
   line-height: 1.6;
   font-size: 16px;
-  font-family: "RobotoRegular", sans-serif; }
+  font-family: "Arial", sans-serif; }
 
 /*--------------------------s
  CUSTOM CODE GOES HERE
 --------------------------*/
+.wrapper {
+  width: 100%;
+  height: 100vh;
+  background: #dd2477;
+  background: -webkit-gradient(left top, left bottom, color-stop(0%, #dd2477), color-stop(100%, #f54643));
+  background: -webkit-gradient(linear, left top, left bottom, from(#dd2477), to(#f54643));
+  background: linear-gradient(to bottom, #dd2477 0%, #f54643 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#dd2477', endColorstr='#f54643', GradientType=0 ); }
 
-/*# sourceMappingURL=style.css.map */
+.form-wrapper {
+  width: 461px;
+  margin: 0 auto;
+  background: #fff;
+  border-radius: 4px;
+  padding: 30px; }
+
+.form {
+  width: 100%; }
+  .form__red {
+    color: red; }
+
+input {
+  width: 100%; }
+  input ::input-placeholder {
+    color: red; }
