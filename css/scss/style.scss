@@ -58,6 +58,18 @@ body{
 	transform: translate(-50%,-50%);
 
 }
+.row{
+	&:after{
+		content: "";
+		clear: both;
+		display: table;
+	}
+	&:before{
+		content: "";
+		clear: both;
+		display: table;
+	}
+}
 
 .form{
 	width: 100%;
